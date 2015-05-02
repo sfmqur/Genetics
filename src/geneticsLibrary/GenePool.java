@@ -7,7 +7,7 @@ public class GenePool {
 	public boolean[] pool;  
 	Random rand = new Random();
 	
-	public GenePool(int numGenes){
+	public GenePool(int numGenes){ // to randomly generate a gene pool
 		pool = new boolean[2 * numGenes];
 		for (int x = 0; x < pool.length; x++){
 			if (rand.nextInt() % 2 == 0){
@@ -17,11 +17,13 @@ public class GenePool {
 			}
 		}
 	}
-	public GenePool(GenePool parent){
+	public GenePool(GenePool parent){ // To make a copy of existing object
 		numGenes = parent.numGenes;
 		pool = parent.pool;
 	}
-	public GenePool(GenePool mother, GenePool father){
-		
+	public GenePool(GenePool mother, GenePool father){ //to create a child object.  With one allele from each parent. 
+		for (int x = 0; x < pool.length; x++){
+			
+		}
 	}
 }
