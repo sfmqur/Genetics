@@ -22,8 +22,22 @@ public class GenePool {
 		pool = parent.pool;
 	}
 	public GenePool(GenePool mother, GenePool father){ //to create a child object.  With one allele from each parent. 
-		for (int x = 0; x < pool.length; x++){
-			
+		int index = 0;
+		for (int x = 0; x < pool.length/2; x += 2){
+			if (rand.nextInt(2) == 0){
+				pool[index] = mother.pool[x];
+				index++;
+			}else{
+				pool[index] = mother.pool[x+1];
+				index++;
+			} 
+			if(rand.nextInt(2) == 0){
+				pool[index] = father.pool[x];
+				index++;
+			}else{
+				pool[index] = father.pool[x+1];
+				index++;
+			}
 		}
 	}
 }
