@@ -23,7 +23,7 @@ public class GenePool {
 	}
 	public GenePool(GenePool mother, GenePool father){ //to create a child object.  With one allele from each parent. 
 		int index = 0;
-		for (int x = 0; x < pool.length/2; x += 2){
+		for (int x = 0; x < this.pool.length/2; x += 2){ //NullPinterException Here
 			if (rand.nextInt(2) == 0){
 				pool[index] = mother.pool[x];
 				index++;
@@ -36,7 +36,6 @@ public class GenePool {
 				index++;
 			}else{
 				pool[index] = father.pool[x+1];
-				index++;
 			}
 		}
 	}
