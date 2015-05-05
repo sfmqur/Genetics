@@ -4,7 +4,8 @@ import java.util.Random;
 
 public class GenePool {
 	public int numGenes = 10;
-	public boolean[] pool;  
+	public boolean[] pool;
+	public String name;
 	Random rand = new Random();
 	
 	public GenePool(int numGenes){ // to randomly generate a gene pool
@@ -23,6 +24,13 @@ public class GenePool {
 	}
 	public GenePool(GenePool mother, GenePool father){ //to create a child object.  With one allele from each parent. 
 		int index = 0;
+		if (mother.pool.length >= father.pool.length){
+			numGenes = mother.pool.length/2;
+		}else{
+			numGenes = father.pool.length/2;
+		}
+		pool = new boolean[numGenes*2];
+		
 		for (int x = 0; x < pool.length/2; x += 2){ //NullPinterException Here
 			if (rand.nextInt(2) == 0){
 				pool[index] = mother.pool[x];
