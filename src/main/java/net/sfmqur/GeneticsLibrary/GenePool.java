@@ -31,7 +31,7 @@ public class GenePool {
 		}
 		pool = new boolean[numGenes*2];
 		
-		for (int x = 0; x < pool.length/2; x += 2){ //NullPinterException Here
+		for (int x = 0; x <= numGenes; x += 2){ 
 			if (rand.nextInt(2) == 0){
 				pool[index] = mother.pool[x];
 				index++;
@@ -44,6 +44,7 @@ public class GenePool {
 				index++;
 			}else{
 				pool[index] = father.pool[x+1];
+				index++;
 			}
 		}
 	}
