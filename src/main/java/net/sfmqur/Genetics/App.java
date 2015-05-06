@@ -1,6 +1,6 @@
 package net.sfmqur.Genetics;
 
-import net.sfmqur.GeneticsLibrary.GenePool;
+import net.sfmqur.GeneticsLibrary.*;
 
 public class App {
 	public static void printPool(GenePool genePool) {
