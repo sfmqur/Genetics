@@ -4,9 +4,12 @@ function test() {
         for(var x in genePool.pool){
             document.write(genePool.pool[x] + ',');
         }
-        document.write(']');
+        document.writeln('] <br>');
 
     }
-    var gene = new GenePool(3);
-    printPool(gene);
+    var mom = new GenePool(3);
+    printPool(mom);
+    var dad = new GenePool(3);
+    printPool(dad);
+
 }
