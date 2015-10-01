@@ -36,6 +36,7 @@ no application, they are just convenient placeholders*/
     this.pool = new Array(this.numGenes*2);
     //todo: check if random is used correctly
     for(var x = 0;x <= this.numGenes; x++){
+        //todo: the pool always ends up all trues
         if(Math.random() *2 == 0) {
             this.pool[index] = mother.pool[x];
             index++;
