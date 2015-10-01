@@ -12,4 +12,6 @@ function test() {
     var dad = new GenePool(3);
     printPool(dad);
 
+    var child = new GenePoolChild(mom, dad);
+    printPool(child);
 }

@@ -33,7 +33,7 @@ no application, they are just convenient placeholders*/
     }
 
     this.pool = new Array(this.numGenes*2);
-    for(var x = 0;x <= this.numGenes; x++){
+    for(var x = 0;x < this.numGenes; x++){
         if(parseInt(Math.random() * 10) % 2 == 0) {
             this.pool[index] = mother.pool[x];
             index++;
