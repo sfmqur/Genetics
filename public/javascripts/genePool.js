@@ -31,7 +31,7 @@ no application, they are just convenient placeholders*/
     }else{
         this.numGenes = father.pool.length/2;
     }
-
+    //todo: may not be working correctly. try array that is straight true
     this.pool = new Array(this.numGenes*2);
     for(var x = 0;x < this.numGenes; x++){
         if(parseInt(Math.random() * 10) % 2 == 0) {
