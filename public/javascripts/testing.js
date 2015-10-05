@@ -7,14 +7,9 @@ function test() {
         document.writeln('] <br>');
 
     }
-
-    var mom = new Object();
-    mom.pool = [true,true,true,true,true,true];
-    mom.numGenes = 3;
+    var mom = new GenePool(3);
     printPool(mom);
-    var dad = new Object();
-    dad.pool = [false,false,false,false,false,false];
-    dad.numGenes = 3;
+    var dad = new GenePool(3);
     printPool(dad);
     document.write("<br>");
     var child = new GenePoolChild(mom, dad);
