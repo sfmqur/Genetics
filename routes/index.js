@@ -7,13 +7,13 @@ router.get('/', function(req, res, next) {
 });
 
 //get conceptProof page
-router.get('/conceptProof', function(req, res, next) {
-  res.render('conceptProof');
+router.get('/conceptProof/index', function(req, res, next) {
+  res.render('conceptProof/index');
 });
 
-//get embed page
-router.get('/embed', function(req, res, next) {
-  res.render('embed');
+//get conceptProof/embed page
+router.get('/conceptProof/embed', function(req, res, next) {
+  res.render('conceptProof/embed');
 });
 
 module.exports = router;
