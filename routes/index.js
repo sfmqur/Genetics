@@ -6,35 +6,14 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Genetics' });
 });
 
+//get conceptProof page
+router.get('/conceptProof', function(req, res, next) {
+  res.render('conceptProof');
+});
+
 //get embed page
 router.get('/embed', function(req, res, next) {
   res.render('embed');
 });
-
-//get mom page
-router.get('/mom', function(req, res, next) {
-  res.render('mom');
-});
-
-//get dad page
-router.get('/dad', function(req, res, next) {
-  res.render('dad');
-});
-
-//get child1 page
-router.get('/child1', function(req, res, next) {
-  res.render('child1');
-});
-
-//get child2 page
-router.get('/child2', function(req, res, next) {
-  res.render('child2');
-});
-
-//get child3 page
-router.get('/child3', function(req, res, next) {
-  res.render('child3');
-});
-
 
 module.exports = router;
