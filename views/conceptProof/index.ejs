@@ -5,6 +5,33 @@
         <link rel='stylesheet' href='/stylesheets/style.css'/>
         <script type="text/javascript" src="/javascripts/genePool.js"></script>
         <script type="text/javascript" src="/javascripts/testing.js"></script>
+        <script type="text/javascript">
+            function colorize(obj){
+                var currentY = 0;
+                for(var x = 0; x < obj.pool.length; x += 2){
+                    <!-- todo: have the genepool objects be asscessable from embed to index -->
+                    if(obj.pool[x] && obj.pool[x+1]){
+                        ctx.fillStyle = "#FF0000";
+                        ctx.fillRect(0,currentY,300,200);
+                        currentY += 200;
+                        continue;
+                    }
+                    if(!obj.pool[x] && !obj.pool[x+1]){
+                        ctx.fillStyle = "#0000CC";
+                        ctx.fillRect(0,currentY,300,200);
+                        currentY += 200;
+                        continue;
+                    }else{
+                        ctx.fillStyle = "#800080";
+                        ctx.fillRect(0,currentY,300,200);
+                        currentY += 200;
+                        continue;
+                    }
+
+                }
+
+                }
+        </script>
     </head>
     <body>
         <h1>Proof of Concept</h1>
@@ -12,7 +39,11 @@
         <p> Push f5 to refresh and rerun test.</p>
         <iframe src="/conceptProof/embed" height="200" width="300"></iframe>
         <canvas id="mom" width="200" height="300">
-
+            <script>
+                var canvas = document.getElementById("mom");
+                var ctx = canvas.getContext("2d");
+                colorize(mom);
+            </script>
         </canvas>
         <canvas id="dad" width="200" height="300">
 
